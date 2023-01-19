@@ -4,7 +4,7 @@ import {ArrowLeftOnRectangleIcon} from "@heroicons/react/24/outline";
 
 function Header() {
   return (
-    <nav className="p-7 bg-orange-300 flex justify-between border-b-2 border-t-2 border-x-orange-800 fix top-0 left-0 right-0 ">
+    <nav className=" bg-orange-300 flex justify-between border-b-2 border-t-2 border-x-orange-800 fix top-0 left-0 right-0 p-2 mt-5 rounded-lg shadow-md">
       <Link href="/">
         <Image
           alt="logo"
