@@ -13,8 +13,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "checkJs": true,
+    "alwaysStrict": true,
+    "noImplicitReturns": true,
+    "typeRoots": ["./typings", "node_modules/@types"],
+    "allowSyntheticDefaultImports": true
   },
+
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }
