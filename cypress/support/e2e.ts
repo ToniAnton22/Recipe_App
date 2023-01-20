@@ -14,13 +14,12 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import "./commands";
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-Cypress.Commands.add('getByData', (selector)=> {
-    return cy.get(`[data-test=${selector}]`)
-})
+Cypress.Commands.add("getByData", (selector) => {
+  return cy.get(`[data-test=${selector}]`);
+});
 
-
-export {}
+export {};

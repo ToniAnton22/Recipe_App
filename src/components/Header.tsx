@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
 import Link from "next/link";
-import {signIn, useSession} from "next-auth/react";
-import {ArrowLeftOnRectangleIcon} from "@heroicons/react/24/outline";
+import { signIn, useSession } from "next-auth/react";
+import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline";
 import session from "../hooks/useAuth";
 
 interface HeaderProps {
   user?: string | undefined;
 }
 
-const Header = ({user}: HeaderProps) => {
-  let {data: session} = useSession();
+const Header = ({ user }: HeaderProps) => {
+  let { data: session } = useSession();
   console.log(user);
   const onLogout = () => {
     session = null;
@@ -31,7 +31,9 @@ const Header = ({user}: HeaderProps) => {
         <ArrowLeftOnRectangleIcon className="h-8 w-8 mt-0.5" />
         <h4 className="text-gray-500">
           {session ? (
-            <button onClick={onLogout} data-test="logout-button">Log out</button>
+            <button onClick={onLogout} data-test="logout-button">
+              Log out
+            </button>
           ) : (
             <Link href="LoginPage">
               <button data-test="login-button">Log In</button>
