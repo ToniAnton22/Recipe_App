@@ -1,5 +1,5 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-import RegisterForm from "../src/components/RegisterForm";
+import RegisterForm from "../components/RegisterForm";
 
 export default {
   title: "Register Form",

@@ -18,9 +18,3 @@ import './commands'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-Cypress.Commands.add('getByData', (selector)=> {
-    return cy.get(`[data-test=${selector}]`)
-})
-
-
-export {}

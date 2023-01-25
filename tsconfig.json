@@ -8,31 +8,23 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
+    "incremental": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "typeRoots": [
-      "./types"
-    ]
+    "jsx": "preserve"
   },
   "include": [
+    "bootstrapTests.ts",
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
-    "src/pages/api/auth.js",
-    "src/pages/api/utility/users.ts",
-    "cypress/e2e/spec.cy.ts",
-    "src/pages/api/auth/[...nextauth].js",
-    "pages/**/*.ts",
-    "cypress/**/*.ts"
-  ],
+    "**/*.tsx"
+, "pages/recipes/[id].js"  ],
   "exclude": [
     "node_modules"
   ]

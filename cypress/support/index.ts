@@ -7,16 +7,12 @@
 declare global {
 	namespace Cypress {
 		interface Chainable {
+
 			getByData(dataTestAttribute: string): Chainable<JQuery<HTMLElement>>;
-            login(email:string, password:string): Chainable<void>
-            register(username:string,email:string,password:string,motherMaidenName:string): Chainable<void> 
 		}
 	}
 }
 
 
 
-
 export { };
-
-

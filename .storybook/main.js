@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   typescript: {reactDocgen: false},
 
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)", "../stories/**/*.stories.@(js|jsx|ts|tsx)","../stories/*.stories.mdx"],
+  stories: ["../stories/**/*.stories.@(js|jsx|ts|tsx)","../stories/*.stories.mdx"],
   /** Expose public folder to storybook as static */
   staticDirs: ["../public"],
   addons: [

@@ -1,24 +1,30 @@
-import React from "react";
-import {ComponentStory, ComponentMeta} from "@storybook/react";
+import React from 'react';
+import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import {Header} from "./Header";
+import Header from '../components/Header'
+import { userEvent, within } from '@storybook/testing-library';
 
 export default {
-  title: "Example/Header",
+  title: 'Header for app',
   component: Header,
   parameters: {
     // More on Story layout: https://storybook.js.org/docs/react/configure/story-layout
-    layout: "fullscreen",
+    layout: 'top',
   },
 } as ComponentMeta<typeof Header>;
 
-const Template: ComponentStory<typeof Header> = (args) => <Header {...args} />;
+const Template: ComponentStory<typeof Header> = () => <Header  />;
 
 export const LoggedIn = Template.bind({});
 LoggedIn.args = {
   user: {
-    name: "Jane Doe",
+    name: 'Jane Doe',
   },
+};
+LoggedIn.play = async ({ HTMLDivElement }) => {
+  const canvas = within(HTMLDivElement);
+  const loginButton = await canvas.getByRole('div', { name: /Log in/i });
+  await userEvent.click(loginButton);
 };
 
 export const LoggedOut = Template.bind({});

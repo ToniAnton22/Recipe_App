@@ -1,11 +1,17 @@
 import {ComponentMeta, ComponentStory} from "@storybook/react";
-import LoginForm from "../src/components/LoginForm";
+import LoginForm from "../components/LoginForm";
+
+
+const Template: React.FC<{ email: string; password: string;}> = () => {
+    return <LoginForm/>;
+}
 
 export default {
-  title: "Login From",
-  component: LoginForm,
-} as ComponentMeta<typeof LoginForm>;
+    title: "LoginForm",
+    component: LoginForm,
+    parameters: {
+        layout: "fullscreen",
+    },
+}
 
-const Template: ComponentStory<typeof LoginForm> = () => <LoginForm />;
-
-export const Primary = Template.bind({});
+export const Primary = Template.bind({})
